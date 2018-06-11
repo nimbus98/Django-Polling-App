@@ -1,0 +1,16 @@
+{% load static %}
+<html><body>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/rstyle.css' %}" />
+
+<h1 id="head">{{ question.question_text }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <li id="list">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+<hr>
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+
+<a href="{% url 'polls:index'%}">Go Back to Home</a>
+</body></html>

@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'bnr'; 
+    src: url('Fonts/BebasNeue-Regular.ttf'); 
+}
+@font-face {
+    font-family: 'bnr1'; 
+    src: url('Fonts/Gobold Blocky Regular.otf'); 
+}
+@font-face {
+    font-family: 'bnr2'; 
+    src: url('Fonts/Philosopher-Bold.ttf'); 
+}
+#head{
+    font-family: 'bnr';
+    font-size: 500%;
+}
+#list{
+    font-family: 'bnr2';
+    font-size: 150%;
+}
+
+
+body {
+    background-image: url("images/pattern.jpg");
+}

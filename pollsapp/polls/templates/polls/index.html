@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    
+
+    <head></head>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+        <title>Polls</title>
+    </head>
+
+    <body>
+        <CENTER><h1 id="head">Random Poll</h1></CENTER>
+        {% if latest_question_list %}
+        <ul id="ani">
+        {% for question in latest_question_list %}<div id="q">
+        <li id="list"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    </div> {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    </body>
+</link>
+</html>
